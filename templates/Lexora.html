@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lexora - Legal AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-brand">Lexora</div>
+  <div class="hamburger" id="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-left">
+    <h1>Welcome to Lexora</h1>
+    <p class="tagline">Precise Provisions for Peace of Mind</p>
+  </div>
+  <div class="hero-right">
+    <img src="{{ url_for('static', filename='assets/Logo2.jpg') }}" alt="Lexora Logo" class="hero-logo" />
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+  <h2>What is Lexora?</h2>
+  <p>
+    Lexora is your bridge connecting Law to cutting-edge AI technologies for Peace Of Mind.
+    We have started outrolling high performance chatbots, tailored for each law firm's website. We have a Law Case Summarizer in the pipeline and that's just the beginning.
+    We understand lawyers need to save time and boost efficiency -- that's exactly what Lexora is about.
+  </p>
+</section>
+
+<!-- Features Section -->
+<section class="features" id="features">
+  <h2>Why Trust Lexora?</h2>
+  <ul class="feature-list">
+    <li><span class="arrow">➤</span> Designed specifically for lawyers, law firms and legal teams</li>
+    <li><span class="arrow">➤</span> Fast, 24/7 intelligent responses</li>
+    <li><span class="arrow">➤</span> GDPR compliant & secure</li>
+    <li><span class="arrow">➤</span> Built on advanced AI and NLP</li>
+  </ul>
+</section>
+
+<!-- Products Section -->
+<section class="about" id="products">
+  <h2>Law Case Summarizer</h2>
+  <form action="/summarize" method="POST" enctype="multipart/form-data" onsubmit="showLoader()">
+    <input type="file" name="pdf" required>
+    <button type="submit">Summarize</button>
+</form>
+  <div id="summary-result"></div>
+</section>
+
+<!-- Footer / Contact -->
+<footer id="contact">
+  <div class="footer-content">
+    <h3>Contact Us</h3>
+    <p>Email: contact.lexoratech@gmail.com</p>
+    <p>Location: Operates World Wide</p>
+  </div>
+  <p class="copyright">
+    © 2025 Lexora. All rights reserved.
+  </p>
+</footer>
+
+<div id="loader" class="loader" style="display: none;">
+  <div class="spinner"></div>
+  <p>Summarizing case file...</p>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
